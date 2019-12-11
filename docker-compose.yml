@@ -1,4 +1,4 @@
-version: "3.4"
+version: '3.4'
 
 services:
   api:
@@ -11,6 +11,14 @@ services:
       MONGO_URI:
       REDIS_HOST:
       REDIS_PORT:
+
+  web-food:
+    container_name: web-food
+    build:
+      context: ./apps/web-food
+      dockerfile: Dockerfile
+    environment:
+      JWT_SECRET:
 
   mongo:
     container_name: mongo

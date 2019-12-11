@@ -8,6 +8,13 @@ services:
     volumes:
       - ./apps/api:/usr/app
 
+  web-food:
+    ports:
+      - '4200:4200'
+    command: ng serve --host 0.0.0.0
+    volumes:
+      - ./apps/web-food:/usr/app
+
   mongo-express:
     container_name: mongo-express
     image: mongo-express:0.49
