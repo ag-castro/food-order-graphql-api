@@ -1,8 +1,8 @@
-version: '3.4'
+version: "3.4"
 
 services:
-  api:
-    container_name: api
+  api-food-order:
+    container_name: api-food-order
     build:
       context: ./apps/api
       dockerfile: Dockerfile
@@ -12,21 +12,21 @@ services:
       REDIS_HOST:
       REDIS_PORT:
 
-  web-food:
-    container_name: web-food
+  web-food-order:
+    container_name: web-food-order
     build:
       context: ./apps/web-food
       dockerfile: Dockerfile
     environment:
       JWT_SECRET:
 
-  mongo:
-    container_name: mongo
+  mongo-food-order:
+    container_name: mongo-food-order
     image: mongo:4
     environment:
       MONGO_INITDB_ROOT_USERNAME:
       MONGO_INITDB_ROOT_PASSWORD:
 
-  redis:
-    container_name: redis
+  redis-food-order:
+    container_name: redis-food-order
     image: redis:5-alpine
