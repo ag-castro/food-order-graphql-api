@@ -1,0 +1,28 @@
+<nb-layout>
+  <nb-layout-header fixed>
+    <div class="let-food-logo">
+      <img src="./../../../assets/images/logo.png" alt="" class="logo" />
+      <h1>Let's Food</h1>
+    </div>
+    <button nbButton ghost size="large" (click)="toggle()">
+      <nb-icon icon="menu-outline" status="basic"></nb-icon>
+    </button>
+    <span class="spacer"></span>
+    <nb-user
+      size="large"
+      name="Andre Gustavo"
+      title="Usuário"
+      showTitle="false"
+      [nbContextMenu]="userMenuItems"
+      nbContextMenuTag="userMenuSettings"
+    >
+    </nb-user>
+  </nb-layout-header>
+
+  <nb-sidebar tag="left" [state]="sideBarState"> </nb-sidebar>
+
+  <nb-layout-column class="colored-column-warning"> </nb-layout-column>
+  <nb-layout-footer>
+    <small>Andre Gustavo</small>
+  </nb-layout-footer>
+</nb-layout>

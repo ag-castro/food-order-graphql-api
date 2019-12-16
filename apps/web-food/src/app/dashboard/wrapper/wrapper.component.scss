@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+
+.let-food-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+  .logo {
+    width: 85px;
+    // margin-left: 1rem;
+  }
+  h1 {
+    font-size: 2.6rem;
+    font-family: 'Righteous', cursive;
+    text-transform: uppercase;
+    color: #b71c1c;
+    text-shadow: 1px 2px 3px #fec20a;
+  }
+}
+.spacer {
+  flex: 1 1 auto;
+}

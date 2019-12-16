@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core'
+import { NbMenuItem } from '@nebular/theme'
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+    <router-outlet></router-outlet>
+  `,
 })
-export class AppComponent {
-  title = 'web-food';
-}
+export class AppComponent {}

@@ -1,25 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { NgModule } from '@angular/core'
+import { AppComponent } from './app.component'
+import { CoreModule } from './core/core.module'
+import { NbThemeModule, NbSidebarModule, NbMenuModule } from '@nebular/theme'
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    NbThemeModule.forRoot({ name: 'corporate' }),
-    NbLayoutModule,
-    NbEvaIconsModule
+    CoreModule,
+    NbThemeModule.forRoot({ name: 'default' }),
+    NbMenuModule.forRoot(),
+    NbSidebarModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
