@@ -1,5 +1,10 @@
 import { Component, OnInit, Inject } from '@angular/core'
-import { NbSidebarService, NbMenuService, NB_WINDOW } from '@nebular/theme'
+import {
+  NbSidebarService,
+  NbMenuService,
+  NB_WINDOW,
+  NbMenuItem,
+} from '@nebular/theme'
 import { filter, map } from 'rxjs/operators'
 
 @Component({
@@ -23,6 +28,29 @@ export class WrapperComponent implements OnInit {
     { title: 'Logout' },
   ]
 
+  mainMenuItems = [
+    {
+      title: 'Profile',
+      icon: 'person-outline',
+      link: [],
+    },
+    {
+      title: 'Change Password',
+      icon: 'lock-outline',
+      link: [],
+    },
+    {
+      title: 'Privacy Policy',
+      icon: { icon: 'checkmark-outline', pack: 'eva' },
+      link: [],
+    },
+    {
+      title: 'Logout',
+      icon: 'unlock-outline',
+      link: [],
+    },
+  ]
+
   ngOnInit() {
     this.nbMenuService
       .onItemClick()
@@ -34,8 +62,6 @@ export class WrapperComponent implements OnInit {
   }
 
   toggle() {
-    // this.sidebarService.toggle(false, 'left')
-    this.sideBarState =
-      this.sideBarState === 'expanded' ? 'compacted' : 'expanded'
+    this.sidebarService.toggle(false, 'left')
   }
 }

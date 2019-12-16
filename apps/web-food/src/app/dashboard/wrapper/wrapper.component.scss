@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One&display=swap');
 
 .let-food-logo {
   display: flex;
@@ -13,9 +14,26 @@
     font-family: 'Righteous', cursive;
     text-transform: uppercase;
     color: #b71c1c;
-    text-shadow: 1px 2px 3px #fec20a;
+    text-shadow: 2px 2px 3px #fec20a;
   }
 }
 .spacer {
   flex: 1 1 auto;
+}
+
+.menu-container {
+  list-style: none;
+  padding: 0rem;
+  li {
+    padding: 1.25rem 0rem;
+    font-family: 'Fugaz One', cursive;
+    font-size: 2.1rem;
+    width: 100% !important;
+    a {
+      width: 100% !important;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: 0.3s all;
+    }
+  }
 }

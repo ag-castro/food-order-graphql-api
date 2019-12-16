@@ -11,6 +11,7 @@ import {
   NbIconModule,
   NbUserModule,
   NbContextMenuModule,
+  NbCardModule,
 } from '@nebular/theme'
 
 import { NbEvaIconsModule } from '@nebular/eva-icons'
@@ -30,6 +31,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons'
     NbEvaIconsModule,
     NbUserModule,
     NbContextMenuModule,
+    NbCardModule,
   ],
   // imports: [NbIconModule],
 })
